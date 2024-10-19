@@ -13,8 +13,8 @@ function calculateResult($sub_one, $sub_two, $sub_three, $sub_four, $sub_five)
             return;
         }
     }
-    $totalMarks = $sub_one + $sub_two + $sub_three + $sub_four + $sub_five;
-    $averageMarks = $totalMarks / 5;
+    $totalMarks = array_sum($marks);
+    $averageMarks = $totalMarks / count($marks);
 
     echo "Total Marks: " . $totalMarks . "<br>";
     echo "Average Marks: " . $averageMarks . "<br>";
@@ -45,4 +45,4 @@ function calculateResult($sub_one, $sub_two, $sub_three, $sub_four, $sub_five)
             break;
     }
 }
-calculateResult(60, 80, 65, 80, 100);
+calculateResult(70, 80, 65, 80, 100);
